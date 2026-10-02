@@ -1,0 +1,553 @@
+{
+  "title": "DigitalKidney",
+  "updated": "2026-10-02",
+  "manuscript_title": "Background-constrained calibration for simulation-validated renal physiological inversion",
+  "evidence": {
+    "clinical_spatial_validation": false,
+    "revision_independent_new_cohort": false,
+    "revision_participants": 18,
+    "real_image_confirmation_participants": 12
+  },
+  "results": {
+    "balanced_calibration": {
+      "dice": {
+        "original": [
+          0.6460998108086642,
+          0.6111665333973415,
+          0.6807349861110937
+        ],
+        "background": [
+          0.7065706572956751,
+          0.6751803351976883,
+          0.7387798511633904
+        ],
+        "difference": [
+          0.06047084648701087,
+          0.050419434152475635,
+          0.07023881580756063
+        ]
+      },
+      "normal_fp": {
+        "original": [
+          0.65771484375,
+          0.6100784866898148,
+          0.7012491861979167
+        ],
+        "background": [
+          0.0769314236111111,
+          0.05636890552662037,
+          0.09675247757523148
+        ],
+        "difference": [
+          -0.5807834201388888,
+          -0.6429407190393518,
+          -0.5171608253761574
+        ]
+      },
+      "parameter_mae": {
+        "original": [
+          0.09609113403906419,
+          0.09455229867025516,
+          0.09768974857042644
+        ],
+        "background": [
+          0.047793597203713824,
+          0.04584848402844117,
+          0.04969050726128943
+        ],
+        "difference": [
+          -0.048297536835350374,
+          -0.050381926066173165,
+          -0.04640324048456495
+        ]
+      }
+    },
+    "same_objective_dice_difference": [
+      0.0149226585334098,
+      0.009687394719501901,
+      0.02052855877102252
+    ],
+    "real_spacetime_nrmse": {
+      "interpolation": 0.2112,
+      "isotropic": 0.1773,
+      "spectral": 0.1777,
+      "coordinate_INR": 0.173
+    }
+  },
+  "model": {
+    "baseline": [
+      0.04,
+      0.1,
+      0.006,
+      90.0,
+      1.2,
+      0.005,
+      15.0
+    ],
+    "dt": 5.0,
+    "times": [
+      0.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      90.0,
+      95.0,
+      100.0,
+      105.0,
+      110.0,
+      115.0,
+      120.0,
+      125.0,
+      130.0,
+      135.0,
+      140.0,
+      145.0,
+      150.0,
+      155.0,
+      160.0,
+      165.0,
+      170.0,
+      175.0,
+      180.0,
+      185.0,
+      190.0,
+      195.0,
+      200.0,
+      205.0,
+      210.0,
+      215.0,
+      220.0,
+      225.0,
+      230.0,
+      235.0,
+      240.0,
+      245.0,
+      250.0,
+      255.0,
+      260.0,
+      265.0,
+      270.0,
+      275.0,
+      280.0,
+      285.0,
+      290.0,
+      295.0,
+      300.0
+    ],
+    "aif": [
+      8.341647478172443e-10,
+      1.928445401483504e-08,
+      2.993697906865523e-07,
+      3.3394565773438156e-06,
+      8.038467060967843e-05,
+      0.001833395913486937,
+      0.006042157597170664,
+      0.0027956821681419694,
+      0.0010596769611661261,
+      0.0009967090824295735,
+      0.0012247205855568696,
+      0.001185254156098291,
+      0.0010108092334623548,
+      0.0009394901713484101,
+      0.0009142867375136656,
+      0.0008998838065344284,
+      0.0008871872352616708,
+      0.0008748077949057074,
+      0.000862609520497046,
+      0.0008505816787285072,
+      0.0008387215569612498,
+      0.0008270268074695812,
+      0.0008154951242138793,
+      0.0008041242334712149,
+      0.000792911893224369,
+      0.0007818558927177999,
+      0.000770954052021729,
+      0.0007602042216023208,
+      0.0007496042818978561,
+      0.0007391521429008138,
+      0.0007288457437457809,
+      0.0007186830523031089,
+      0.0007086620647782346,
+      0.0006987808053165892,
+      0.0006890373256140154,
+      0.0006794297045326175,
+      0.000669956047721967,
+      0.0006606144872455911,
+      0.000651403181212668,
+      0.000642320313414858,
+      0.0006333640929682001,
+      0.0006245327539599987,
+      0.0006158245551006371,
+      0.0006072377793802434,
+      0.000598770733730146,
+      0.0005904217486890475,
+      0.000582189178073855,
+      0.0005740713986550991,
+      0.0005660668098368788,
+      0.0005581738333412701,
+      0.0005503909128971339,
+      0.0005427165139332633,
+      0.0005351491232758101,
+      0.0005276872488499296,
+      0.0005203294193855857,
+      0.0005130741841274584,
+      0.0005059201125488956,
+      0.0004988657940698546,
+      0.0004919098377787744,
+      0.0004850508721583287,
+      0.0004782875448150008
+    ],
+    "relaxivity": 3500.0,
+    "status": "Illustrative synthetic forward simulation, not patient inference"
+  },
+  "sources": [
+    {
+      "id": 1,
+      "title": "Physiology and Anatomy Aware Inverse Inference of Myocardial Infarction for Cardiac Digital Twin",
+      "authors": "Wang M, Lyu Y, Camps J, et al.",
+      "venue": "MICCAI 2026. LNCS 16889:627-637. Springer, 2027; first online 25 September 2026",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-38186-6_59",
+      "doi": "10.1007/978-3-032-38186-6_59"
+    },
+    {
+      "id": 2,
+      "title": "Nottingham T2-weighted kidney MRI and manual segmentation data",
+      "authors": "Daniel AJ, Buchanan CE, Allcock T, et al.",
+      "venue": "",
+      "url": "https://zenodo.org/records/5153568",
+      "doi": ""
+    },
+    {
+      "id": 3,
+      "title": "Quantitative transport mapping (QTM) of the kidney with an approximate microvascular network",
+      "authors": "Zhou L, Zhang Q, Spincemaille P, et al.",
+      "venue": "Magnetic Resonance in Medicine 2021;85:2247-2262",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33210310/",
+      "doi": "10.1002/mrm.28584"
+    },
+    {
+      "id": 4,
+      "title": "Deep learning-based perfusion quantification and large vessel exclusion for renal multi-TI arterial spin labelling MRI",
+      "authors": "Zhang J, Kong X, Lin X, et al.",
+      "venue": "Magnetic Resonance Imaging 2026;126:110573",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41260277/",
+      "doi": "10.1016/j.mri.2025.110573"
+    },
+    {
+      "id": 5,
+      "title": "Transolver: A Fast Transformer Solver for PDEs on General Geometries",
+      "authors": "Wu H, Luo H, Wang H, et al.",
+      "venue": "Proceedings of ICML 2024; PMLR 235:53681-53705",
+      "url": "https://proceedings.mlr.press/v235/wu24r.html",
+      "doi": ""
+    },
+    {
+      "id": 6,
+      "title": "Transolver++: An Accurate Neural Solver for PDEs on Million-Scale Geometries",
+      "authors": "Luo H, Wu H, Zhou H, et al.",
+      "venue": "Proceedings of ICML 2025; PMLR 267:41432-41449",
+      "url": "https://proceedings.mlr.press/v267/luo25o.html",
+      "doi": ""
+    },
+    {
+      "id": 7,
+      "title": "Does Transolver really need a Transformer?",
+      "authors": "Wen S, Mishra S.",
+      "venue": "arXiv preprint, 2026-09-26",
+      "url": "https://arxiv.org/abs/2609.32525",
+      "doi": "10.48550/arXiv.2609.32525"
+    },
+    {
+      "id": 8,
+      "title": "Physics-Informed Implicit Neural Representations for Improved Myocardial Perfusion MRI Quantification",
+      "authors": "Tsepas C, Yan C, Fuetterer M, et al.",
+      "venue": "Accepted at STACOM workshop at MICCAI 2026; author arXiv manuscript, 2026-08-11",
+      "url": "https://arxiv.org/abs/2608.11282",
+      "doi": "10.48550/arXiv.2608.11282"
+    },
+    {
+      "id": 9,
+      "title": "Physics-informed neural networks for myocardial perfusion MRI quantification",
+      "authors": "van Herten RLM, Chiribiri A, Breeuwer M, et al.",
+      "venue": "Medical Image Analysis 2022;78:102399",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35299005/",
+      "doi": "10.1016/j.media.2022.102399"
+    },
+    {
+      "id": 10,
+      "title": "KRUK renal DCE MRI public data, v0.0.4",
+      "authors": "Sourbron S (dataset); Basak S, Buckley DL, Chrysochou C, et al. (source study)",
+      "venue": "",
+      "url": "https://zenodo.org/records/20364938",
+      "doi": ""
+    },
+    {
+      "id": 11,
+      "title": "A deep learning image analysis method for renal perfusion estimation in pseudo-continuous arterial spin labelling MRI",
+      "authors": "Oyarzun-Domeño A, Cia I, Echeverria-Chasco R, et al.",
+      "venue": "Magnetic Resonance Imaging 2023;104:39-51",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37776961/",
+      "doi": "10.1016/j.mri.2023.09.007"
+    },
+    {
+      "id": 12,
+      "title": "Estimation of multicomponent flow in the kidney with multi-b-value spectral diffusion",
+      "authors": "Liu MM, Gladytz T, Dyke J, et al.",
+      "venue": "Magnetic Resonance in Medicine 2025;94:2550-2566",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40720675/",
+      "doi": "10.1002/mrm.30644"
+    },
+    {
+      "id": 13,
+      "title": "AKI-twinX: explainable organ structured digital twin for sepsis AKI trajectory forecasting",
+      "authors": "Cai J, Gatz AE, Li J, et al.",
+      "venue": "medRxiv preprint, 2026-03-22",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41890997/",
+      "doi": ""
+    },
+    {
+      "id": 14,
+      "title": "SPPINN repository",
+      "authors": "",
+      "venue": "",
+      "url": "https://github.com/lucasdevries/SPPINN",
+      "doi": ""
+    },
+    {
+      "id": 15,
+      "title": "DCE-MRI of the human kidney using BLADE: A feasibility study in healthy volunteers [Dataset]",
+      "authors": "Zöllner F, Lietzmann F, Attenberger U, et al.",
+      "venue": "heiDATA 2019; dataset DOI 10.11588/DATA/5RSAM3",
+      "url": "https://doi.org/10.11588/DATA/5RSAM3",
+      "doi": ""
+    },
+    {
+      "id": 16,
+      "title": "Medical digital twins: enabling precision medicine and medical artificial intelligence",
+      "authors": "Sadée C, Testa S, Barba T, et al.",
+      "venue": "Lancet Digit Health 2025;7(7):100864",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40518342/",
+      "doi": "10.1016/j.landig.2025.02.004"
+    },
+    {
+      "id": 17,
+      "title": "Digital twins for health: a scoping review",
+      "authors": "Katsoulakis E, Wang Q, Wu H, et al.",
+      "venue": "NPJ Digit Med 2024;7(1):77",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38519626/",
+      "doi": "10.1038/s41746-024-01073-0"
+    },
+    {
+      "id": 18,
+      "title": "Automated renal segmentation in healthy and chronic kidney disease subjects using a convolutional neural network",
+      "authors": "Daniel AJ, Buchanan CE, Allcock T, et al.",
+      "venue": "Magn Reson Med 2021;86(2):1125-1136",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33755256/",
+      "doi": "10.1002/mrm.28768"
+    },
+    {
+      "id": 19,
+      "title": "MRI-measurement of perfusion and glomerular filtration in the human kidney with a separable compartment model",
+      "authors": "Sourbron SP, Michaely HJ, Reiser MF, et al.",
+      "venue": "Invest Radiol 2008;43(1):40-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18097276/",
+      "doi": "10.1097/RLI.0b013e31815597c5"
+    },
+    {
+      "id": 20,
+      "title": "Temporal constraints in renal perfusion imaging with a 2-compartment model",
+      "authors": "Michaely HJ, Sourbron SP, Buettner C, et al.",
+      "venue": "Invest Radiol 2008;43(2):120-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18197064/",
+      "doi": "10.1097/RLI.0b013e3181583b0c"
+    },
+    {
+      "id": 21,
+      "title": "Precise measurement of renal filtration and vascular parameters using a two-compartment model for dynamic contrast-enhanced MRI of the kidney gives realistic normal values",
+      "authors": "Tofts PS, Cutajar M, Mendichovszky IA, et al.",
+      "venue": "Eur Radiol 2012;22(6):1320-30",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22415410/",
+      "doi": "10.1007/s00330-012-2382-9"
+    },
+    {
+      "id": 22,
+      "title": "Experimentally-derived functional form for a population-averaged high-temporal-resolution arterial input function for dynamic contrast-enhanced MRI",
+      "authors": "Parker GJ, Roberts C, Macdonald A, et al.",
+      "venue": "Magn Reson Med 2006;56(5):993-1000",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17036301/",
+      "doi": "10.1002/mrm.21066"
+    },
+    {
+      "id": 23,
+      "title": "Technical recommendations for clinical translation of renal MRI: a consensus project of the Cooperation in Science and Technology Action PARENCHIMA",
+      "authors": "Mendichovszky I, Pullens P, Dekkers I, et al.",
+      "venue": "MAGMA 2020;33(1):131-140",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31628564/",
+      "doi": "10.1007/s10334-019-00784-w"
+    },
+    {
+      "id": 24,
+      "title": "Consensus-based technical recommendations for clinical translation of renal ASL MRI",
+      "authors": "Nery F, Buchanan CE, Harteveld AA, et al.",
+      "venue": "MAGMA 2020;33(1):141-161",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31833014/",
+      "doi": "10.1007/s10334-019-00800-z"
+    },
+    {
+      "id": 25,
+      "title": "Consensus-based technical recommendations for clinical translation of renal T1 and T2 mapping MRI",
+      "authors": "Dekkers IA, de Boer A, Sharma K, et al.",
+      "venue": "MAGMA 2020;33(1):163-176",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31758418/",
+      "doi": "10.1007/s10334-019-00797-5"
+    },
+    {
+      "id": 26,
+      "title": "Multiparametric functional MRI of the kidneys - evaluation of test-retest repeatability and effects of different manual and automatic image analysis strategies",
+      "authors": "Liang C, Loster I, Ursprung S, et al.",
+      "venue": "Rofo 2025;197(10):1176-1187",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39793612/",
+      "doi": "10.1055/a-2480-4885"
+    },
+    {
+      "id": 27,
+      "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+      "authors": "Raissi M, Perdikaris P, Karniadakis GE.",
+      "venue": "J Comput Phys 2019;378:686-707",
+      "url": "https://doi.org/10.1016/j.jcp.2018.10.045",
+      "doi": "10.1016/j.jcp.2018.10.045"
+    },
+    {
+      "id": 28,
+      "title": "Physics-informed machine learning",
+      "authors": "Karniadakis GE, Kevrekidis IG, Lu L, et al.",
+      "venue": "Nat Rev Phys 2021;3:422-440",
+      "url": "https://www.nature.com/articles/s42254-021-00314-5",
+      "doi": "10.1038/s42254-021-00314-5"
+    },
+    {
+      "id": 29,
+      "title": "Solving inverse problems using data-driven models",
+      "authors": "Arridge S, Maass P, Öktem O, Schönlieb CB.",
+      "venue": "Acta Numer 2019;28:1-174",
+      "url": "https://doi.org/10.1017/S0962492919000059",
+      "doi": "10.1017/S0962492919000059"
+    },
+    {
+      "id": 30,
+      "title": "MoDL: Model-Based Deep Learning Architecture for Inverse Problems",
+      "authors": "Aggarwal HK, Mani MP, Jacob M.",
+      "venue": "IEEE Trans Med Imaging 2019;38(2):394-405",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30106719/",
+      "doi": "10.1109/TMI.2018.2865356"
+    },
+    {
+      "id": 31,
+      "title": "Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains",
+      "authors": "Tancik M, Srinivasan PP, Mildenhall B, et al.",
+      "venue": "Adv Neural Inf Process Syst 2020;33:7537-7547",
+      "url": "https://papers.neurips.cc/paper_files/paper/2020/hash/55053683268957697aa39fba6f231c68-Abstract.html",
+      "doi": null
+    },
+    {
+      "id": 32,
+      "title": "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
+      "authors": "Qi CR, Su H, Mo K, Guibas LJ.",
+      "venue": "Proceedings of CVPR 2017:652-660",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Qi_PointNet_Deep_Learning_CVPR_2017_paper.html",
+      "doi": "10.1109/CVPR.2017.16"
+    },
+    {
+      "id": 33,
+      "title": "Fourier Neural Operator for Parametric Partial Differential Equations",
+      "authors": "Li Z, Kovachki N, Azizzadenesheli K, et al.",
+      "venue": "ICLR 2021",
+      "url": "https://arxiv.org/abs/2010.08895",
+      "doi": "10.48550/arXiv.2010.08895"
+    },
+    {
+      "id": 34,
+      "title": "Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators",
+      "authors": "Lu L, Jin P, Pang G, et al.",
+      "venue": "Nat Mach Intell 2021;3:218-229",
+      "url": "https://www.nature.com/articles/s42256-021-00302-5",
+      "doi": "10.1038/s42256-021-00302-5"
+    },
+    {
+      "id": 35,
+      "title": "Metrics reloaded: recommendations for image analysis validation",
+      "authors": "Maier-Hein L, Reinke A, Godau P, et al.",
+      "venue": "Nat Methods 2024;21(2):195-212",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38347141/",
+      "doi": "10.1038/s41592-023-02151-z"
+    },
+    {
+      "id": 36,
+      "title": "Consensus-based technical recommendations for clinical translation of renal Dynamic Contrast-Enhanced (DCE) MRI",
+      "authors": "Gunwhy ER, Kurugol S, Serai S, et al.",
+      "venue": "medRxiv preprint, 2026-05-14; not peer reviewed",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.05.11.26352525v1",
+      "doi": "10.64898/2026.05.11.26352525"
+    },
+    {
+      "id": 37,
+      "title": "Structural and practical identifiability of contrast transport models for DCE-MRI",
+      "authors": "Conte M, Woodall RT, Gutova M, et al.",
+      "venue": "PLOS Comput Biol 2024;20:e1012106",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012106",
+      "doi": "10.1371/journal.pcbi.1012106"
+    },
+    {
+      "id": 38,
+      "title": "DCE-MRI of the human kidney using BLADE: a feasibility study in healthy volunteers",
+      "authors": "Lietzmann F, Zöllner FG, Attenberger UI, et al.",
+      "venue": "J Magn Reson Imaging 2012;35:868-874",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22127916/",
+      "doi": "10.1002/jmri.23509"
+    },
+    {
+      "id": 39,
+      "title": "Evidential Perfusion Physics-Informed Neural Networks with Residual Uncertainty Quantification",
+      "authors": "Lee J, Choi M, Jang H, et al.",
+      "venue": "MICCAI 2026 accepted manuscript, arXiv:2603.09359v2; not a verified final LNCS citation",
+      "url": "https://arxiv.org/abs/2603.09359v2",
+      "doi": "10.48550/arXiv.2603.09359"
+    },
+    {
+      "id": 40,
+      "title": "A deep learning approach to multi-fiber parameter estimation and uncertainty quantification in diffusion MRI",
+      "authors": "Consagra W, Ning L, Rathi Y",
+      "venue": "Med Image Anal 2025;102:103537",
+      "url": "https://doi.org/10.1016/j.media.2025.103537",
+      "doi": "10.1016/j.media.2025.103537"
+    },
+    {
+      "id": 41,
+      "title": "Estimates of glomerular filtration rate from MR renography and tracer kinetic models",
+      "authors": "Bokacheva L, Rusinek H, Zhang JL, Chen Q, Lee VS",
+      "venue": "J Magn Reson Imaging 2009;29(2):371-382",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19161190/",
+      "doi": "10.1002/jmri.21642"
+    }
+  ],
+  "provenance": {
+    "MANUSCRIPT.md": "1229454248ca216c9a84bcf05e4866d15c474973b6890508eb4c8ed0b0e79917",
+    "outputs/study_revision_results.json": "faaefc0e2f51de941d23099bdd6e239930f1ffce14c7e6db93bcb88a14cefce5",
+    "outputs/study_media_summary.csv": "2b0399be792be049fbb694b30021d3ce08c07ddf7ad7a886d7e27b1b0ccb51c6",
+    "study_sources.json": "6eb97ab3ed281313a75f17c0c92ac2b8f8e0f52020b1e1a4676441c25c6f5577"
+  }
+}
