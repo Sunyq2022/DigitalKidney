@@ -19,7 +19,7 @@
       elements.push(`<line x1="${margin.left}" y1="${sy(y)}" x2="${W - margin.right}" y2="${sy(y)}" stroke="#e8efeb"/><text x="${margin.left - 10}" y="${sy(y) + 4}" text-anchor="end" fill="#728881" font-size="12">${y.toFixed(2)}</text>`);
     }
     for (let t = 0; t <= 300; t += 60) elements.push(`<text x="${sx(t)}" y="${H - 22}" text-anchor="middle" fill="#728881" font-size="12">${t}</text>`);
-    elements.push(`<text x="${W / 2}" y="${H - 1}" text-anchor="middle" fill="#597078" font-size="12">时间（秒）</text><text x="${margin.left}" y="12" fill="#597078" font-size="11">S / S₀ − 1</text>`);
+    elements.push(`<text x="${W / 2}" y="${H - 1}" text-anchor="middle" fill="#597078" font-size="12">Time (s)</text><text x="${margin.left}" y="12" fill="#597078" font-size="11">S / S₀ − 1</text>`);
     for (const [name, values] of Object.entries(series)) {
       const path = values.map((value, i) => `${i ? 'L' : 'M'}${sx(data.model.times[i]).toFixed(3)},${sy(value).toFixed(3)}`).join(' ');
       elements.push(`<path d="${path}" fill="none" stroke="${colors[name]}" stroke-width="${name === 'corrected' ? 2.1 : 2.8}" ${name === 'corrected' ? 'stroke-dasharray="6 5"' : ''}/>`);
@@ -61,12 +61,12 @@
     const transformed = physics.enhancement(data.model.aif, after, data.model.dt, data.model.relaxivity);
     plot({normal, abnormal, corrected: transformed});
     const error = Math.max(...abnormal.map((value, i) => Math.abs(value - transformed[i])));
-    const cells = [['流量 Fₚ', before[0].toFixed(4), 's⁻¹'], ['滤过 Fₜ', before[2].toFixed(4), 's⁻¹'], ['转运 Tₜ', before[3].toFixed(1), '秒']];
-    document.getElementById('parameter-grid').innerHTML = cells.map(([label, value, unit]) => `<div><span>${label}</span><strong>${value}</strong><small>${unit} · 有效生理参数</small></div>`).join('');
-    document.getElementById('gauge-heading').textContent = diffuse ? '弥漫改变可被吸收到重估基线' : '正常背景保留局部扰动';
-    document.getElementById('gauge-description').textContent = diffuse ? `校正后该点严重度为 (${corrected.severity[511].map(v => v.toFixed(2)).join(', ')})，但基线变为 Fₚ⁰=${corrected.baseline[0].toFixed(4)}、Fₜ⁰=${corrected.baseline[2].toFixed(4)}、Tₜ⁰=${corrected.baseline[3].toFixed(1)}。严重度归零不表示生理恢复。` : '有足够正常背景时，q=0.20分位数为零，局部扰动与有效生理参数被保留。这一示例没有拟合误差或校准噪声。';
+    const cells = [['Flow Fₚ', before[0].toFixed(4), 's⁻¹'], ['Filtration Fₜ', before[2].toFixed(4), 's⁻¹'], ['Transit Tₜ', before[3].toFixed(1), 's']];
+    document.getElementById('parameter-grid').innerHTML = cells.map(([label, value, unit]) => `<div><span>${label}</span><strong>${value}</strong><small>${unit} · effective parameter</small></div>`).join('');
+    document.getElementById('gauge-heading').textContent = diffuse ? 'Diffuse change can shift into the estimated baseline' : 'A normal background preserves the focal perturbation';
+    document.getElementById('gauge-description').textContent = diffuse ? `Corrected severity at this point is (${corrected.severity[511].map(v => v.toFixed(2)).join(', ')}), while the baseline becomes Fₚ⁰=${corrected.baseline[0].toFixed(4)}, Fₜ⁰=${corrected.baseline[2].toFixed(4)}, Tₜ⁰=${corrected.baseline[3].toFixed(1)}. Zero corrected severity does not establish physiological recovery.` : 'With sufficient normal background, the q=0.20 quantile is zero and the focal perturbation and effective parameters are preserved. This illustrative example has no fitting error or calibration noise.';
     document.querySelector('.gauge-message').classList.toggle('diffuse', diffuse);
-    document.getElementById('gauge-error').textContent = `两条扰动曲线的最大差值：${error.toExponential(2)} · 等价变换示例`;
+    document.getElementById('gauge-error').textContent = `Maximum difference between perturbed and transformed curves: ${error.toExponential(2)} · equivalent transformation`;
     kidneyArt(level, diffuse);
   }
   for (const button of document.querySelectorAll('[data-mechanism]')) button.addEventListener('click', () => {
@@ -87,8 +87,14 @@
       a.textContent = source.title; a.href = source.url; small.textContent = `${source.authors || ''} · ${source.venue}`;
       li.append(a, small); list.append(li);
     }
-    document.getElementById('reference-count').textContent = `${items.length} / ${data.sources.length} 条来源`;
+    document.getElementById('reference-count').textContent = `${items.length} / ${data.sources.length} sources`;
   }
   document.getElementById('reference-filter').addEventListener('input', references);
+  function currentEvidence() {
+    const v = data.current_study, target = document.getElementById('current-results');
+    if (!v || !target) return;
+    target.innerHTML = `<article class="result-card accent"><span class="small-label">Quality-guided reference · untuned replication</span><div class="large-number">${v.DICE} <span>Dice</span></div><h3>Paired gain under noise and calibration bias</h3><p>${v.N} MRI examinations and ${Number(v.FITS).toLocaleString('en-US')} method–scenario fits; joint inversion with a weak prior achieved ${v.BASE}.</p><div class="result-detail">Paired difference ${v.DELTA} [${v.LO}, ${v.HI}]<br>Functional truth and regional observations are simulated.</div></article><article class="result-card"><span class="small-label">Simulated normal controls</span><div class="large-number">${v.BASEFP}% <span>→</span> ${v.FP}%</div><h3>False positives and low-noise performance</h3><p>Normal, flow, filtration, mixed and transit scenarios are evaluated for each examination. The figure includes stronger priors, 300-step refinement and the full likelihood chart.</p><div class="result-detail">Simulated false positives do not establish patient specificity.</div></article><article class="result-card"><span class="small-label">Isotope split function · 60 reserved participants</span><div class="large-number">8.50 <span>pp MAE</span></div><h3>A measured reference for the whole-organ component</h3><p>Equal split: 16.56 pp; volume proportion: 6.26 pp. Physiological minus volume MAE: 2.23 pp [−0.42, 5.11].</p><div class="result-detail">No advantage over volume established; absolute GFR and spatial injury remain unvalidated.</div></article>`;
+  }
+  currentEvidence();
   references(); render();
 })();

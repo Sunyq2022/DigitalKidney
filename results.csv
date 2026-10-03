@@ -1,4 +1,4 @@
-experiment,metric,method,mean,lower95,upper95,participants,scope
+experiment,metric,method,mean,lower95,upper95,statistical_units,scope
 balanced_simulated_calibration,dice,original,0.6460998108086642,0.6111665333973415,0.6807349861110937,18,reused_original_test_anatomy
 balanced_simulated_calibration,dice,background,0.7065706572956751,0.6751803351976883,0.7387798511633904,18,reused_original_test_anatomy
 balanced_simulated_calibration,dice,difference,0.06047084648701087,0.050419434152475635,0.07023881580756063,18,reused_original_test_anatomy
@@ -14,3 +14,68 @@ acquired_signal_reconstruction,spacetime_nrmse,interpolation,0.2112121242589836,
 acquired_signal_reconstruction,spacetime_nrmse,isotropic,0.1773268865128877,0.1502416227225536,0.2061044126804865,12,healthy_BLADE_confirmation
 acquired_signal_reconstruction,spacetime_nrmse,regional_mean,0.2571915575407721,0.2161461513788075,0.3000211074488512,12,healthy_BLADE_confirmation
 acquired_signal_reconstruction,spacetime_nrmse,spectral,0.1776644903144042,0.1506955856696943,0.2062778765871793,12,healthy_BLADE_confirmation
+TSMRI_calibration,dice,adaptive_anchor,0.8629105942465408,0.8583831617779318,0.8673693388508048,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,normal_fp,adaptive_anchor,0.0099064936647173,0.0076334635416666,0.0124612611172027,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,parameter_mae,adaptive_anchor,0.0326115466024341,0.0322079610547502,0.0330368558185984,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,eta_mae,adaptive_anchor,0.0441792820883704,0.0435670369343284,0.0448253652879263,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,dice,joint_chart_init,0.8629105942465408,0.8583831617779318,0.8673693388508048,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,normal_fp,joint_chart_init,0.0099064936647173,0.0076334635416666,0.0124612611172027,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,parameter_mae,joint_chart_init,0.0326115466024341,0.0322079610547502,0.0330368558185984,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,eta_mae,joint_chart_init,0.0441792820883704,0.0435670369343284,0.0448253652879263,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,dice,joint_hi,0.7995349822373476,0.7921282987964483,0.806927382969252,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,normal_fp,joint_hi,0.0290341739766081,0.023908934119152,0.034493976912768,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,parameter_mae,joint_hi,0.0404520081426061,0.0398604638372945,0.0410809352924138,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,eta_mae,joint_hi,0.0465034698257354,0.0457735761774461,0.0472793262481588,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,dice,joint_hi300,0.7868021844239945,0.7791676832309,0.7942707030982192,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,normal_fp,joint_hi300,0.0302486903021442,0.0250402617872807,0.0357731214973196,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,parameter_mae,joint_hi300,0.0417405445538969,0.0411624670243271,0.0423645606208283,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,eta_mae,joint_hi300,0.0488710446849278,0.0481548337464243,0.0496366851543032,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,dice,joint_lo,0.8629199616741716,0.8583831617779318,0.8673789430732818,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,normal_fp,joint_lo,0.0099064936647173,0.0076334635416666,0.0124612611172027,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,parameter_mae,joint_lo,0.0326103061150766,0.0322061702178983,0.0330352939143785,513,examinations; participant independence unverified; simulated physiology
+TSMRI_calibration,eta_mae,joint_lo,0.0441790160968337,0.0435662785431062,0.0448251369849411,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,dice,adaptive_anchor,0.757934659586032,0.7508759352884375,0.7649766951873825,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,normal_fp,adaptive_anchor,0.0724597953216374,0.0677577325475146,0.0772840711805555,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,parameter_mae,adaptive_anchor,0.0434720093109344,0.0427920677560425,0.0441747928623923,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,eta_mae,adaptive_anchor,0.02191422735456,0.0216120615108288,0.0222166035819638,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,dice,joint_chart_init,0.7577446256165137,0.750580381493508,0.7648584917380128,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,normal_fp,joint_chart_init,0.07523528874269,0.0703772234405458,0.0803298801474171,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,parameter_mae,joint_chart_init,0.0432119692012224,0.0425312543878618,0.0439056411824873,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,eta_mae,joint_chart_init,0.0222261064221622,0.0219235503064639,0.0225351572506597,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,dice,joint_hi,0.741716365014034,0.7337320831838494,0.7495024298063114,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,normal_fp,joint_hi,0.098105506822612,0.0902853923001949,0.1059948183174951,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,parameter_mae,joint_hi,0.0506847116317359,0.0500394973481712,0.0513775854135434,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,eta_mae,joint_hi,0.0474032966864667,0.0466549458239159,0.0482055006683121,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,dice,joint_hi300,0.7282516349553626,0.7202268876003276,0.7359938236975998,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,normal_fp,joint_hi300,0.1006449500487329,0.0928513911732456,0.1083512274610136,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,parameter_mae,joint_hi300,0.0534448876283467,0.0528226317617166,0.0541021879552,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,eta_mae,joint_hi300,0.0498421896317681,0.0490942407408333,0.0506341206511873,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,dice,joint_lo,0.7159233996590153,0.7072505946828236,0.7244337869223505,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,normal_fp,joint_lo,0.1222778082358674,0.1161671539961013,0.1289748758832846,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,parameter_mae,joint_lo,0.0569899100334642,0.0562780994185396,0.0577449250512993,513,examinations; participant independence unverified; simulated physiology
+TSMRI_noise_calibration,eta_mae,joint_lo,0.0480567554003477,0.0473834961584198,0.0487722826955754,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,dice,adaptive_anchor,0.8785204285679505,0.8753144709756471,0.8818002197049108,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,normal_fp,adaptive_anchor,7.995248538011695e-05,7.614522417153996e-06,0.0001865557992202,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,parameter_mae,adaptive_anchor,0.0137612239313111,0.0135251899438946,0.0139966901289784,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,eta_mae,adaptive_anchor,0.0044916260015073,0.0043308457312891,0.0046499855763509,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,dice,joint_chart_init,0.8785204285679505,0.8753144709756471,0.8818002197049108,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,normal_fp,joint_chart_init,7.995248538011695e-05,7.614522417153996e-06,0.0001865557992202,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,parameter_mae,joint_chart_init,0.0137612239313111,0.0135251899438946,0.0139966901289784,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,eta_mae,joint_chart_init,0.0044916260015073,0.0043308457312891,0.0046499855763509,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,dice,joint_hi,0.8568901923897206,0.8531180694532267,0.8607758591165785,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,normal_fp,joint_hi,5.330165692007797e-05,0.0,0.0001294468810916,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,parameter_mae,joint_hi,0.014812777995415,0.0145369664324463,0.0150937921216562,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,eta_mae,joint_hi,0.0047943446035055,0.0046269109544137,0.0049598883887251,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,dice,joint_hi300,0.8497434662651365,0.8458362606090819,0.8536640259863892,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,normal_fp,joint_hi300,6.472344054580896e-05,3.807261208576998e-06,0.0001446759259259,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,parameter_mae,joint_hi300,0.0157983808013243,0.0155078008658691,0.0160903279669253,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,eta_mae,joint_hi300,0.0027237105108257,0.0026441071881498,0.0028091632857787,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,dice,joint_lo,0.8785204285679505,0.8753144709756471,0.8818002197049108,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,normal_fp,joint_lo,7.995248538011695e-05,7.614522417153996e-06,0.0001865557992202,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,parameter_mae,joint_lo,0.0137612239313111,0.0135251899438946,0.0139966901289784,513,examinations; participant independence unverified; simulated physiology
+TSMRI_standard,eta_mae,joint_lo,0.0044916260015073,0.0043308457312891,0.0046499855763509,513,examinations; participant independence unverified; simulated physiology
+isotope_split_function,mae_pp,enhancement_auc_fraction,14.605782950030465,11.57742408959481,17.852000742206688,60,same 60 reserved participants; acquired whole-organ reference
+isotope_split_function,mae_pp,equal_split,16.56486927092618,12.889777605923912,20.500599278173706,60,same 60 reserved participants; acquired whole-organ reference
+isotope_split_function,mae_pp,late_enhancement_auc_fraction,14.36397470737494,11.373519787133691,17.569792368736973,60,same 60 reserved participants; acquired whole-organ reference
+isotope_split_function,mae_pp,physiology,8.498949513035676,6.044629484585856,11.56710389652259,60,same 60 reserved participants; acquired whole-organ reference
+isotope_split_function,mae_pp,volume_fraction,6.264259481929593,4.782906046115007,7.981623972206691,60,same 60 reserved participants; acquired whole-organ reference
